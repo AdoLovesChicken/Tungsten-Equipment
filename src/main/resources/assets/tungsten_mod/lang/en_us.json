@@ -1,0 +1,9 @@
+{
+  "item.tungsten_mod.tungsten_ingot": "Tungsten Ingot",
+  "item.tungsten_mod.tungsten_scrap": "Tungsten Scrap",
+
+  "block.tungsten_mod.tungsten_block": "Block of Tungsten",
+  "block.tungsten_mod.tungsten_clump": "Tungsten Clump",
+
+  "itemgroup.tungsten_mod": "Tungsten Mod"
+}

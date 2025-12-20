@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 2,
+  "group": "tungsten_scrap",
+  "ingredient": {
+    "item": "tungsten_mod:tungsten_clump"
+  },
+  "result": {
+    "id": "tungsten_mod:tungsten_scrap"
+  }
+}

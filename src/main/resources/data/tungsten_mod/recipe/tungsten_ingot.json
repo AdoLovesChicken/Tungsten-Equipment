@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    { "item": "tungsten_mod:tungsten_scrap" },
+    { "item": "tungsten_mod:tungsten_scrap" },
+    { "item": "tungsten_mod:tungsten_scrap" },
+    { "item": "tungsten_mod:tungsten_scrap" },
+    { "item": "minecraft:iron_ingot" },
+    { "item": "minecraft:iron_ingot" },
+    { "item": "minecraft:iron_ingot" },
+    { "item": "minecraft:iron_ingot" }
+  ],
+  "result": {
+    "count": 1,
+    "id": "tungsten_mod:tungsten_ingot"
+  }
+}

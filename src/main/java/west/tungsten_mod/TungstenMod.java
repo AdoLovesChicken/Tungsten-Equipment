@@ -4,6 +4,9 @@ import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import west.tungsten_mod.block.ModBlocks;
+import west.tungsten_mod.item.ModItemGroups;
+import west.tungsten_mod.item.ModItems;
 
 public class TungstenMod implements ModInitializer {
 	public static final String MOD_ID = "tungsten_mod";
@@ -11,5 +14,8 @@ public class TungstenMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
+		ModItemGroups.registerItemGroups();
 	}
 }
