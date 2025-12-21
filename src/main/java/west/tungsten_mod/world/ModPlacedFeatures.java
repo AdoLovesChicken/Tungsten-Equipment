@@ -5,19 +5,26 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.FeatureConfig;
 import net.minecraft.world.gen.feature.PlacedFeature;
+import net.minecraft.world.gen.placementmodifier.HeightRangePlacementModifier;
 import net.minecraft.world.gen.placementmodifier.PlacementModifier;
 import west.tungsten_mod.TungstenMod;
 
 import java.util.List;
 
 public class ModPlacedFeatures {
+    public static final RegistryKey<PlacedFeature> TUNGSTEN_CLUMP_PLACED_KEY = registerKey("tungsten_clump_placed_key");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
+
+        register(context, TUNGSTEN_CLUMP_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.TUNGSTEN_CLUMP_KEY),
+                ModOrePlacement.modifiersWithCount(5,
+                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(-60), YOffset.fixed(-10))));
 
     }
 

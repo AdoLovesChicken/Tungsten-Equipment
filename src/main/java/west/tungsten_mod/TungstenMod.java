@@ -18,6 +18,6 @@ public class TungstenMod implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModItemGroups.registerItemGroups();
-		//ModWorldGeneration.generateModWorldGen();
+		ModWorldGeneration.generateModWorldGen();
 	}
 }
