@@ -34,9 +34,9 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.TUNGSTEN_HOE);
 
         getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
-                .add(ModItems.TUNSGTEN_HELMET)
-                .add(ModItems.TUNSGTEN_BOOTS)
-                .add(ModItems.TUNSGTEN_CHESTPLATE)
-                .add(ModItems.TUNSGTEN_LEGGINGS);
+                .add(ModItems.TUNGSTEN_HELMET)
+                .add(ModItems.TUNGSTEN_CHESTPLATE)
+                .add(ModItems.TUNGSTEN_LEGGINGS)
+                .add(ModItems.TUNGSTEN_BOOTS);
     }
 }

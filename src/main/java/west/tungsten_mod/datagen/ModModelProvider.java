@@ -32,9 +32,9 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.TUNGSTEN_AXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.TUNGSTEN_HOE, Models.HANDHELD);
 
-        itemModelGenerator.registerArmor(((ArmorItem) ModItems.TUNSGTEN_HELMET));
-        itemModelGenerator.registerArmor(((ArmorItem) ModItems.TUNSGTEN_BOOTS));
-        itemModelGenerator.registerArmor(((ArmorItem) ModItems.TUNSGTEN_CHESTPLATE));
-        itemModelGenerator.registerArmor(((ArmorItem) ModItems.TUNSGTEN_LEGGINGS));
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.TUNGSTEN_HELMET));
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.TUNGSTEN_BOOTS));
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.TUNGSTEN_CHESTPLATE));
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.TUNGSTEN_LEGGINGS));
     }
 }

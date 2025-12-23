@@ -38,10 +38,10 @@ public class ModItemGroups {
                         entries.add(ModItems.TUNGSTEN_SHOVEL);
 
                         //armoireror
-                        entries.add(ModItems.TUNSGTEN_CHESTPLATE);
-                        entries.add(ModItems.TUNSGTEN_BOOTS);
-                        entries.add(ModItems.TUNSGTEN_HELMET);
-                        entries.add(ModItems.TUNSGTEN_LEGGINGS);
+                        entries.add(ModItems.TUNGSTEN_CHESTPLATE);
+                        entries.add(ModItems.TUNGSTEN_BOOTS);
+                        entries.add(ModItems.TUNGSTEN_HELMET);
+                        entries.add(ModItems.TUNGSTEN_LEGGINGS);
                     })
                     .build()
     );

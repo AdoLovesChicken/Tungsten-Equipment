@@ -6,6 +6,8 @@ import net.minecraft.advancement.Advancement;
 import net.minecraft.advancement.AdvancementEntry;
 import net.minecraft.advancement.AdvancementFrame;
 import net.minecraft.advancement.criterion.InventoryChangedCriterion;
+import net.minecraft.item.Item;
+import net.minecraft.predicate.item.ItemPredicate;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
@@ -85,5 +87,38 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                         InventoryChangedCriterion.Conditions.items(ModBlocks.TUNGSTEN_BLOCK)
                 )
                 .build(consumer, TungstenMod.MOD_ID + "/obtain_tungsten_block");
+
+        AdvancementEntry FORTH = Advancement.Builder.create()
+                .parent(SECOND)
+                .display(
+                        ModItems.TUNGSTEN_CHESTPLATE,
+                        Text.literal("Covered in Tungsten"),
+                        Text.literal("Obtain full Tungsten Armor"),
+                        null,
+                        AdvancementFrame.TASK,
+                        true,
+                        true,
+                        false
+                )
+                .criterion(
+                        "has_tungsten_chestplate",
+                        InventoryChangedCriterion.Conditions.items(ModItems.TUNGSTEN_CHESTPLATE)
+                )
+                .criterion("has_tungsten_boots",
+                        InventoryChangedCriterion.Conditions.items(ModItems.TUNGSTEN_BOOTS)
+                )
+                .criterion(
+                        "has_tungsten_leggings",
+                        InventoryChangedCriterion.Conditions.items(ModItems.TUNGSTEN_LEGGINGS)
+                )
+                .criterion("has_tungsten_helmet",
+                        InventoryChangedCriterion.Conditions.items(ModItems.TUNGSTEN_HELMET)
+                )
+                .build(consumer, TungstenMod.MOD_ID + "/obtain_tungsten_armor");
+
+
+
+
+
     }
 }

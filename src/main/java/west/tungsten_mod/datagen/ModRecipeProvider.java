@@ -143,5 +143,59 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter, Identifier.of(TungstenMod.MOD_ID, "tungsten_shovel_upgrade"));
 
 
+        // armor not tools smithing
+
+
+        SmithingTransformRecipeJsonBuilder.create(
+                        Ingredient.ofItems(ModItems.TUNGSTEN_UPGRADE_TEMPLATE),
+                        Ingredient.ofItems(Items.DIAMOND_BOOTS),
+                        Ingredient.ofItems(ModItems.TUNGSTEN_INGOT),
+                        RecipeCategory.MISC,
+                        ModItems.TUNGSTEN_BOOTS
+                )
+                .criterion(
+                        hasItem(ModItems.TUNGSTEN_UPGRADE_TEMPLATE),
+                        conditionsFromItem(ModItems.TUNGSTEN_UPGRADE_TEMPLATE)
+                )
+                .offerTo(exporter, Identifier.of(TungstenMod.MOD_ID, "tungsten_boots_upgrade"));
+
+        SmithingTransformRecipeJsonBuilder.create(
+                        Ingredient.ofItems(ModItems.TUNGSTEN_UPGRADE_TEMPLATE),
+                        Ingredient.ofItems(Items.DIAMOND_LEGGINGS),
+                        Ingredient.ofItems(ModItems.TUNGSTEN_INGOT),
+                        RecipeCategory.MISC,
+                        ModItems.TUNGSTEN_LEGGINGS
+                )
+                .criterion(
+                        hasItem(ModItems.TUNGSTEN_UPGRADE_TEMPLATE),
+                        conditionsFromItem(ModItems.TUNGSTEN_UPGRADE_TEMPLATE)
+                )
+                .offerTo(exporter, Identifier.of(TungstenMod.MOD_ID, "tungsten_leggings_upgrade"));
+
+        SmithingTransformRecipeJsonBuilder.create(
+                        Ingredient.ofItems(ModItems.TUNGSTEN_UPGRADE_TEMPLATE),
+                        Ingredient.ofItems(Items.DIAMOND_HELMET),
+                        Ingredient.ofItems(ModItems.TUNGSTEN_INGOT),
+                        RecipeCategory.MISC,
+                        ModItems.TUNGSTEN_HELMET
+                )
+                .criterion(
+                        hasItem(ModItems.TUNGSTEN_UPGRADE_TEMPLATE),
+                        conditionsFromItem(ModItems.TUNGSTEN_UPGRADE_TEMPLATE)
+                )
+                .offerTo(exporter, Identifier.of(TungstenMod.MOD_ID, "tungsten_helmet_upgrade"));
+
+        SmithingTransformRecipeJsonBuilder.create(
+                        Ingredient.ofItems(ModItems.TUNGSTEN_UPGRADE_TEMPLATE),
+                        Ingredient.ofItems(Items.DIAMOND_CHESTPLATE),
+                        Ingredient.ofItems(ModItems.TUNGSTEN_INGOT),
+                        RecipeCategory.MISC,
+                        ModItems.TUNGSTEN_CHESTPLATE
+                )
+                .criterion(
+                        hasItem(ModItems.TUNGSTEN_UPGRADE_TEMPLATE),
+                        conditionsFromItem(ModItems.TUNGSTEN_UPGRADE_TEMPLATE)
+                )
+                .offerTo(exporter, Identifier.of(TungstenMod.MOD_ID, "tungsten_chestplate_upgrade"));
     }
 }
