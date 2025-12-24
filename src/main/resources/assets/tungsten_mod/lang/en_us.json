@@ -15,7 +15,7 @@
   "item.tungsten_mod.tungsten_hoe": "Tungsten Hoe",
   "item.tungsten_mod.tungsten_sword": "Tungsten Sword",
 
-  "item.tungsten_mod.tungsten_upgrade_template.applies_to": "Tungsten Equipment",
+  "item.tungsten_mod.tungsten_upgrade_template.applies_to": "Diamond Equipment",
   "item.tungsten_mod.tungsten_upgrade_template.ingredients": "Tungsten Ingot",
   "item.tungsten_mod.tungsten_upgrade_template.title": "Tungsten Upgrade",
   "item.tungsten_mod.tungsten_upgrade_template.base_slot_description": "Add diamond equipment",

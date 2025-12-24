@@ -115,10 +115,5 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                         InventoryChangedCriterion.Conditions.items(ModItems.TUNGSTEN_HELMET)
                 )
                 .build(consumer, TungstenMod.MOD_ID + "/obtain_tungsten_armor");
-
-
-
-
-
     }
 }
