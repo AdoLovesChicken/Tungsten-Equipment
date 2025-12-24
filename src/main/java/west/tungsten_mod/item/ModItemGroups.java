@@ -27,21 +27,21 @@ public class ModItemGroups {
                         entries.add(ModItems.TUNGSTEN_UPGRADE_TEMPLATE);
 
                         // Blocks
-                        entries.add(ModBlocks.TUNGSTEN_BLOCK);
                         entries.add(ModBlocks.TUNGSTEN_CLUMP);
+                        entries.add(ModBlocks.TUNGSTEN_BLOCK);
 
                         // uh tools ig
                         entries.add(ModItems.TUNGSTEN_SWORD);
                         entries.add(ModItems.TUNGSTEN_PICKAXE);
                         entries.add(ModItems.TUNGSTEN_AXE);
-                        entries.add(ModItems.TUNGSTEN_HOE);
                         entries.add(ModItems.TUNGSTEN_SHOVEL);
+                        entries.add(ModItems.TUNGSTEN_HOE);
 
                         //armoireror
-                        entries.add(ModItems.TUNGSTEN_CHESTPLATE);
-                        entries.add(ModItems.TUNGSTEN_BOOTS);
                         entries.add(ModItems.TUNGSTEN_HELMET);
+                        entries.add(ModItems.TUNGSTEN_CHESTPLATE);
                         entries.add(ModItems.TUNGSTEN_LEGGINGS);
+                        entries.add(ModItems.TUNGSTEN_BOOTS);
                     })
                     .build()
     );
