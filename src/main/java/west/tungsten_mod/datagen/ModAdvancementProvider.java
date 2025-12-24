@@ -92,10 +92,10 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                 .parent(SECOND)
                 .display(
                         ModItems.TUNGSTEN_CHESTPLATE,
-                        Text.literal("Covered in Tungsten"),
-                        Text.literal("Obtain full Tungsten Armor"),
+                        Text.literal("Cover Me in Tungsten"),
+                        Text.literal("Get a full suit of Tungsten armor"),
                         null,
-                        AdvancementFrame.TASK,
+                        AdvancementFrame.CHALLENGE,
                         true,
                         true,
                         false

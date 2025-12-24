@@ -43,12 +43,13 @@
     }
   },
   "display": {
-    "description": "Obtain full Tungsten Armor",
+    "description": "Obtain a full suit of Tungsten armor",
+    "frame": "challenge",
     "icon": {
       "count": 1,
       "id": "tungsten_mod:tungsten_chestplate"
     },
-    "title": "Covered in Tungsten"
+    "title": "Cover Me in Tungsten"
   },
   "requirements": [
     [

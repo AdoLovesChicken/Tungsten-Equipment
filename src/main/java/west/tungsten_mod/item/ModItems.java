@@ -5,6 +5,7 @@ import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 import west.tungsten_mod.TungstenMod;
 import net.minecraft.item.SmithingTemplateItem;
@@ -19,15 +20,31 @@ public class ModItems {
             Registries.ITEM,
             Identifier.of(TungstenMod.MOD_ID, "tungsten_upgrade_template"),
             new SmithingTemplateItem(
-                    Text.translatable("item.tungsten_mod.tungsten_upgrade_template.applies_to"),
-                    Text.translatable("item.tungsten_mod.tungsten_upgrade_template.ingredients"),
-                    Text.translatable("item.tungsten_mod.tungsten_upgrade_template.title"),
-                    Text.translatable("item.tungsten_mod.tungsten_upgrade_template.base_slot_description"),
-                    Text.translatable("item.tungsten_mod.tungsten_upgrade_template.additions_slot_description"),
+                    Text.translatable(
+                            "item.tungsten_mod.tungsten_upgrade_template.applies_to"
+                    ).formatted(Formatting.BLUE),
+
+                    Text.translatable(
+                            "item.tungsten_mod.tungsten_upgrade_template.ingredients"
+                    ).formatted(Formatting.BLUE),
+
+                    Text.translatable(
+                            "item.tungsten_mod.tungsten_upgrade_template.title"
+                    ).formatted(Formatting.GRAY),
+
+                    Text.translatable(
+                            "item.tungsten_mod.tungsten_upgrade_template.base_slot_description"
+                    ).formatted(Formatting.GRAY),
+
+                    Text.translatable(
+                            "item.tungsten_mod.tungsten_upgrade_template.additions_slot_description"
+                    ).formatted(Formatting.GRAY),
+
                     getTungstenBaseSlotTextures(),
                     getTungstenAdditionSlotTextures()
             )
     );
+
 
     private static List<Identifier> getTungstenBaseSlotTextures() {
         return List.of(
