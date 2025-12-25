@@ -1,41 +1,51 @@
 {
   "parent": "minecraft:tungsten_mod/obtain_tungsten_template",
   "criteria": {
-    "has_tungsten_boots": {
+    "has_tungsten_axe": {
       "conditions": {
         "items": [
           {
-            "items": "tungsten_mod:tungsten_boots"
+            "items": "tungsten_mod:tungsten_axe"
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_tungsten_chestplate": {
+    "has_tungsten_hoe": {
       "conditions": {
         "items": [
           {
-            "items": "tungsten_mod:tungsten_chestplate"
+            "items": "tungsten_mod:tungsten_hoe"
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_tungsten_helmet": {
+    "has_tungsten_pickaxe": {
       "conditions": {
         "items": [
           {
-            "items": "tungsten_mod:tungsten_helmet"
+            "items": "tungsten_mod:tungsten_pickaxe"
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_tungsten_leggings": {
+    "has_tungsten_shovel": {
       "conditions": {
         "items": [
           {
-            "items": "tungsten_mod:tungsten_leggings"
+            "items": "tungsten_mod:tungsten_shovel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_tungsten_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": "tungsten_mod:tungsten_sword"
           }
         ]
       },
@@ -43,26 +53,29 @@
     }
   },
   "display": {
-    "description": "Get a full suit of Tungsten armor",
+    "description": "Get a full set of Tungsten tools",
     "frame": "challenge",
     "icon": {
       "count": 1,
-      "id": "tungsten_mod:tungsten_chestplate"
+      "id": "tungsten_mod:tungsten_pickaxe"
     },
-    "title": "Cover Me in Tungsten"
+    "title": "Tooled Up in Tungsten"
   },
   "requirements": [
     [
-      "has_tungsten_chestplate"
+      "has_tungsten_sword"
     ],
     [
-      "has_tungsten_boots"
+      "has_tungsten_pickaxe"
     ],
     [
-      "has_tungsten_leggings"
+      "has_tungsten_axe"
     ],
     [
-      "has_tungsten_helmet"
+      "has_tungsten_shovel"
+    ],
+    [
+      "has_tungsten_hoe"
     ]
   ],
   "sends_telemetry_event": true

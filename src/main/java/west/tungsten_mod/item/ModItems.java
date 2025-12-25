@@ -70,6 +70,7 @@ public class ModItems {
     public static final Item TUNGSTEN_SWORD = registerItem("tungsten_sword",
             new SwordItem(ModToolMaterials.TUNGSTEN, new Item.Settings()
                     .fireproof()
+
                     .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.TUNGSTEN, 3, -2.4f))));
 
     public static final Item TUNGSTEN_PICKAXE = registerItem("tungsten_pickaxe",

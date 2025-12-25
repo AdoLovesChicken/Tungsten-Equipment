@@ -1,7 +1,9 @@
 package west.tungsten_mod.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemGroups;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -12,6 +14,7 @@ import west.tungsten_mod.block.ModBlocks;
 
 public class ModItemGroups {
 
+    // Custom Tungsten mod tab
     public static final ItemGroup TUNGSTEN_MOD_GROUP = Registry.register(
             Registries.ITEM_GROUP,
             Identifier.of(TungstenMod.MOD_ID, "tungsten_mod"),
@@ -19,25 +22,25 @@ public class ModItemGroups {
                     .icon(() -> new ItemStack(ModItems.TUNGSTEN_INGOT))
                     .displayName(Text.translatable("itemgroup.tungsten_mod"))
                     .entries((displayContext, entries) -> {
-                        // Items
+                        // Materials
                         entries.add(ModItems.TUNGSTEN_INGOT);
                         entries.add(ModItems.TUNGSTEN_SCRAP);
 
-                        //template
+                        // Template
                         entries.add(ModItems.TUNGSTEN_UPGRADE_TEMPLATE);
 
                         // Blocks
                         entries.add(ModBlocks.TUNGSTEN_CLUMP);
                         entries.add(ModBlocks.TUNGSTEN_BLOCK);
 
-                        // uh tools ig
+                        // Tools
                         entries.add(ModItems.TUNGSTEN_SWORD);
                         entries.add(ModItems.TUNGSTEN_PICKAXE);
                         entries.add(ModItems.TUNGSTEN_AXE);
                         entries.add(ModItems.TUNGSTEN_SHOVEL);
                         entries.add(ModItems.TUNGSTEN_HOE);
 
-                        //armoireror
+                        // Armororororororororororooooooooooooooooooooooooooooooooo (aint no one finding ts MUAHAH)
                         entries.add(ModItems.TUNGSTEN_HELMET);
                         entries.add(ModItems.TUNGSTEN_CHESTPLATE);
                         entries.add(ModItems.TUNGSTEN_LEGGINGS);
@@ -48,5 +51,30 @@ public class ModItemGroups {
 
     public static void registerItemGroups() {
         TungstenMod.LOGGER.info("Registering Item Groups for " + TungstenMod.MOD_ID);
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
+            entries.add(ModItems.TUNGSTEN_INGOT);
+            entries.add(ModItems.TUNGSTEN_SCRAP);
+            entries.add(ModBlocks.TUNGSTEN_CLUMP);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> {
+            entries.add(ModItems.TUNGSTEN_PICKAXE);
+            entries.add(ModItems.TUNGSTEN_AXE);
+            entries.add(ModItems.TUNGSTEN_SHOVEL);
+            entries.add(ModItems.TUNGSTEN_HOE);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
+            entries.add(ModItems.TUNGSTEN_SWORD);
+            entries.add(ModItems.TUNGSTEN_HELMET);
+            entries.add(ModItems.TUNGSTEN_CHESTPLATE);
+            entries.add(ModItems.TUNGSTEN_LEGGINGS);
+            entries.add(ModItems.TUNGSTEN_BOOTS);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> entries.add(ModBlocks.TUNGSTEN_BLOCK));
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> entries.add(ModBlocks.TUNGSTEN_CLUMP));
     }
 }

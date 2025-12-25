@@ -88,8 +88,26 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                 )
                 .build(consumer, TungstenMod.MOD_ID + "/obtain_tungsten_block");
 
-        AdvancementEntry FORTH = Advancement.Builder.create()
+        AdvancementEntry SIXTH = Advancement.Builder.create()
                 .parent(SECOND)
+                .display(
+                        ModItems.TUNGSTEN_UPGRADE_TEMPLATE,
+                        Text.literal("Strongholds treasure"),
+                        Text.literal("Find A Tungsten Smithing Template"),
+                        null,
+                        AdvancementFrame.TASK,
+                        true,
+                        true,
+                        false
+                )
+                .criterion(
+                        "has_tungsten_template",
+                        InventoryChangedCriterion.Conditions.items(ModItems.TUNGSTEN_UPGRADE_TEMPLATE)
+                )
+                .build(consumer, TungstenMod.MOD_ID + "/obtain_tungsten_template");
+
+        AdvancementEntry FORTH = Advancement.Builder.create()
+                .parent(SIXTH)
                 .display(
                         ModItems.TUNGSTEN_CHESTPLATE,
                         Text.literal("Cover Me in Tungsten"),
@@ -115,5 +133,40 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                         InventoryChangedCriterion.Conditions.items(ModItems.TUNGSTEN_HELMET)
                 )
                 .build(consumer, TungstenMod.MOD_ID + "/obtain_tungsten_armor");
+
+        AdvancementEntry FIFTH = Advancement.Builder.create()
+                .parent(SIXTH)
+                .display(
+                        ModItems.TUNGSTEN_PICKAXE,
+                        Text.literal("Tooled Up in Tungsten"),
+                        Text.literal("Get a full set of Tungsten tools"),
+                        null,
+                        AdvancementFrame.CHALLENGE,
+                        true,
+                        true,
+                        false
+                )
+                .criterion(
+                        "has_tungsten_sword",
+                        InventoryChangedCriterion.Conditions.items(ModItems.TUNGSTEN_SWORD)
+                )
+                .criterion(
+                        "has_tungsten_pickaxe",
+                        InventoryChangedCriterion.Conditions.items(ModItems.TUNGSTEN_PICKAXE)
+                )
+                .criterion(
+                        "has_tungsten_axe",
+                        InventoryChangedCriterion.Conditions.items(ModItems.TUNGSTEN_AXE)
+                )
+                .criterion(
+                        "has_tungsten_shovel",
+                        InventoryChangedCriterion.Conditions.items(ModItems.TUNGSTEN_SHOVEL)
+                )
+                .criterion(
+                        "has_tungsten_hoe",
+                        InventoryChangedCriterion.Conditions.items(ModItems.TUNGSTEN_HOE)
+                )
+                .build(consumer, TungstenMod.MOD_ID + "/obtain_tungsten_tools");
+
     }
 }

@@ -1,0 +1,29 @@
+{
+  "parent": "minecraft:tungsten_mod/obtain_tungsten_clump",
+  "criteria": {
+    "has_tungsten_template": {
+      "conditions": {
+        "items": [
+          {
+            "items": "tungsten_mod:tungsten_upgrade_template"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Find A Tungsten Smithing Template",
+    "icon": {
+      "count": 1,
+      "id": "tungsten_mod:tungsten_upgrade_template"
+    },
+    "title": "Strongholds treasure"
+  },
+  "requirements": [
+    [
+      "has_tungsten_template"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

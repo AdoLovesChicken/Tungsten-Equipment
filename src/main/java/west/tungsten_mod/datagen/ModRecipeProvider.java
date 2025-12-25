@@ -3,6 +3,7 @@ package west.tungsten_mod.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeExporter;
+import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.SmithingTransformRecipeJsonBuilder;
 import net.minecraft.item.Items;
@@ -77,6 +78,27 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         Identifier.of(TungstenMod.MOD_ID, "tungsten_ingot_from_scrap")
                 );
 
+        ShapedRecipeJsonBuilder.create(
+                        RecipeCategory.MISC,
+                        ModItems.TUNGSTEN_UPGRADE_TEMPLATE,
+                        2
+                )
+                .pattern("DTD")
+                .pattern("DSD")
+                .pattern("DDD")
+                .input('S', Items.DEEPSLATE)
+                .input('T', ModItems.TUNGSTEN_UPGRADE_TEMPLATE)
+                .input('D', Items.DIAMOND)
+                .criterion(
+                        hasItem(ModItems.TUNGSTEN_UPGRADE_TEMPLATE),
+                        conditionsFromItem(ModItems.TUNGSTEN_UPGRADE_TEMPLATE)
+                )
+                .offerTo(
+                        exporter,
+                        Identifier.of(TungstenMod.MOD_ID, "tungsten_upgrade_template_duplication")
+                );
+
+
         SmithingTransformRecipeJsonBuilder.create(
                         Ingredient.ofItems(ModItems.TUNGSTEN_UPGRADE_TEMPLATE),
                         Ingredient.ofItems(Items.DIAMOND_SWORD),
@@ -141,7 +163,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         conditionsFromItem(ModItems.TUNGSTEN_UPGRADE_TEMPLATE)
                 )
                 .offerTo(exporter, Identifier.of(TungstenMod.MOD_ID, "tungsten_shovel_upgrade"));
-
 
         // armor not tools smithing
 

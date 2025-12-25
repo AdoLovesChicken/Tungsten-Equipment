@@ -1,4 +1,4 @@
-// 1.21.1	2025-12-24T17:26:07.1197404	Tungsten Mod/Recipes
+// 1.21.1	2025-12-25T21:53:34.2232593	Tungsten Mod/Recipes
 a79c98d0a3682e4eee4f6bb568af032951025240 data\tungsten_mod\recipe\tungsten_sword_upgrade.json
 23e814b367f16c109e3e6c2d7634d38fb10d2b08 data\tungsten_mod\advancement\recipes\misc\tungsten_helmet_upgrade.json
 175d1e437f04a0dc307d33d4609d50d4e4dff8bf data\tungsten_mod\recipe\tungsten_pickaxe_upgrade.json
@@ -12,6 +12,7 @@ d85eddd224eb4a03bc4830143f57e8dbaa76d061 data\tungsten_mod\recipe\tungsten_block
 b08864bde0b983050096cd198f45274c988f5f32 data\tungsten_mod\recipe\tungsten_ingot_from_scrap.json
 f9245bedd26f1b0e5b2921447be4e433c712b0b9 data\tungsten_mod\advancement\recipes\misc\tungsten_pickaxe_upgrade.json
 60e761ff3115f5ad7d83e3c991d7d1c70bddd2a0 data\tungsten_mod\recipe\tungsten_boots_upgrade.json
+89939cdb6439d00fa27da674d9b19a363f514f69 data\tungsten_mod\advancement\recipes\misc\tungsten_upgrade_template_duplication.json
 dd6cab2a6ae8a4b54496f423ece90f70eac5d0a9 data\tungsten_mod\advancement\recipes\misc\tungsten_ingot_from_scrap.json
 851d5dee656e0c35d66966648f1fefa3c01f07d0 data\tungsten_mod\advancement\recipes\misc\tungsten_sword_upgrade.json
 4ab5102ff60f6b90f0d03499aaafcfed39046869 data\tungsten_mod\recipe\tungsten_scrap_from_smelting_tungsten_clump.json
@@ -26,4 +27,5 @@ cf5ed29fadaed13be7b901eba080cff4f095eaa9 data\tungsten_mod\recipe\tungsten_chest
 8912f6bf4c22a5bea5cddd04ad3e518cae58fb11 data\tungsten_mod\advancement\recipes\misc\tungsten_block.json
 9752eec92f96d560890a4a6af239de4a1dc79f95 data\tungsten_mod\advancement\recipes\misc\tungsten_shovel_upgrade.json
 20fb18238884250cd5426c4205720e68107b6341 data\tungsten_mod\advancement\recipes\misc\tungsten_leggings_upgrade.json
+26531bb41bea05f2a6ab9d02103af5c30fbf292e data\tungsten_mod\recipe\tungsten_upgrade_template_duplication.json
 261e8e1b9025c91e90619ec5fbca9c3c3ba7ee51 data\tungsten_mod\recipe\tungsten_axe_upgrade.json

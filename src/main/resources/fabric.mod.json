@@ -12,7 +12,7 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/tungsten_mod/icon.png",
+	"icon": "assets/tungsten_mod/logo.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
@@ -27,7 +27,7 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.18.3",
-		"minecraft": "~1.21.1",
+		"minecraft": ">=1.21 <1.22",
 		"java": ">=21",
 		"fabric-api": "*"
 	}
