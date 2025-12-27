@@ -2,7 +2,6 @@ package west.tungsten_mod.item;
 
 import com.google.common.base.Suppliers;
 import net.minecraft.block.Block;
-import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.tag.TagKey;
@@ -10,7 +9,7 @@ import west.tungsten_mod.util.ModTags;
 import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
-    TUNGSTEN(ModTags.Blocks.INCORRECT_FOR_TUNGSTEN_TOOL, 2031, 9F, 4F, 15, () -> Ingredient.ofItems(ModItems.TUNGSTEN_INGOT));
+    TUNGSTEN(ModTags.Blocks.INCORRECT_FOR_TUNGSTEN_TOOL, 2336, 9F, 4F, 13, () -> Ingredient.ofItems(ModItems.TUNGSTEN_INGOT));
 
     private final TagKey<Block> inverseTag;
     private final int itemDurability;

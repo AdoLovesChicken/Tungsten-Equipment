@@ -1,6 +1,9 @@
 package west.tungsten_mod.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.component.type.FoodComponent;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -70,7 +73,6 @@ public class ModItems {
     public static final Item TUNGSTEN_SWORD = registerItem("tungsten_sword",
             new SwordItem(ModToolMaterials.TUNGSTEN, new Item.Settings()
                     .fireproof()
-
                     .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.TUNGSTEN, 3, -2.4f))));
 
     public static final Item TUNGSTEN_PICKAXE = registerItem("tungsten_pickaxe",
@@ -92,20 +94,33 @@ public class ModItems {
 
     public static final Item TUNGSTEN_HELMET = registerItem("tungsten_helmet",
             new ArmorItem(ModArmorMaterials.TUNGSTEN, ArmorItem.Type.HELMET, new Item.Settings().fireproof()
-                    .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(37))));
+                    .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(42))));
     public static final Item TUNGSTEN_CHESTPLATE = registerItem("tungsten_chestplate",
             new ArmorItem(ModArmorMaterials.TUNGSTEN, ArmorItem.Type.CHESTPLATE, new Item.Settings().fireproof()
-                    .maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(37))));
+                    .maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(42))));
     public static final Item TUNGSTEN_LEGGINGS = registerItem("tungsten_leggings",
             new ArmorItem(ModArmorMaterials.TUNGSTEN, ArmorItem.Type.LEGGINGS, new Item.Settings().fireproof()
-                    .maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(37))));
+                    .maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(42))));
     public static final Item TUNGSTEN_BOOTS = registerItem("tungsten_boots",
             new ArmorItem(ModArmorMaterials.TUNGSTEN, ArmorItem.Type.BOOTS, new Item.Settings().fireproof()
-                    .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(37))));
+                    .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(42))));
+
+    public static final Item TUNGSTEN_SLOP = registerItem("tungsten_slop",
+            new Item(new Item.Settings()
+                    .maxCount(1) // Non-stackable
+                    .food(new FoodComponent.Builder()
+                            .nutrition(2)
+                            .saturationModifier(0.5F)
+                            .statusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 20 * 45, 2), 1.0F)
+                            .statusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 20 * 60, 2), 1.0F)
+                            .alwaysEdible()
+                            .usingConvertsTo(Items.BOWL)
+                            .build()
+                    )
+            )
+    );
 
     public static void registerModItems() {
-        TungstenMod.LOGGER.info("Registering Mod Items for " + TungstenMod.MOD_ID);
-
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(TUNGSTEN_INGOT);
             entries.add(TUNGSTEN_SCRAP);

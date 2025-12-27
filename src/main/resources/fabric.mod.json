@@ -1,15 +1,15 @@
 {
 	"schemaVersion": 1,
 	"id": "tungsten_mod",
-	"version": "${version}",
+	"version": "1.0.4",
 	"name": "Tungsten Mod",
-	"description": "Tungsten as an alternative to Netherite.",
+	"description": "Tungsten is an overworld alternative to Netherite, offering similar strength without being an exact copy..",
 	"authors": [
-		"Me!!!!!!!!"
+		"West-ghoster"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://modrinth.com/mod/tungsten-equipment",
+		"sources": ""
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/tungsten_mod/logo.png",

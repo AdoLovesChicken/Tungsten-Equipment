@@ -218,5 +218,18 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         conditionsFromItem(ModItems.TUNGSTEN_UPGRADE_TEMPLATE)
                 )
                 .offerTo(exporter, Identifier.of(TungstenMod.MOD_ID, "tungsten_chestplate_upgrade"));
+
+        ShapelessRecipeJsonBuilder.create(
+                        RecipeCategory.FOOD,
+                        ModItems.TUNGSTEN_SLOP
+                )
+                .input(Items.BROWN_MUSHROOM)
+                .input(Items.BOWL)
+                .input(ModItems.TUNGSTEN_INGOT)
+                .criterion(
+                        hasItem(ModItems.TUNGSTEN_INGOT),
+                        conditionsFromItem(ModItems.TUNGSTEN_INGOT)
+                )
+                .offerTo(exporter, Identifier.of(TungstenMod.MOD_ID, "tungsten_slop"));
     }
 }

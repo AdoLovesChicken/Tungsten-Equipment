@@ -40,11 +40,14 @@ public class ModItemGroups {
                         entries.add(ModItems.TUNGSTEN_SHOVEL);
                         entries.add(ModItems.TUNGSTEN_HOE);
 
-                        // Armororororororororororooooooooooooooooooooooooooooooooo (aint no one finding ts MUAHAH)
+                        // Armor
                         entries.add(ModItems.TUNGSTEN_HELMET);
                         entries.add(ModItems.TUNGSTEN_CHESTPLATE);
                         entries.add(ModItems.TUNGSTEN_LEGGINGS);
                         entries.add(ModItems.TUNGSTEN_BOOTS);
+
+                        // food
+                        entries.add(ModItems.TUNGSTEN_SLOP);
                     })
                     .build()
     );
@@ -71,6 +74,10 @@ public class ModItemGroups {
             entries.add(ModItems.TUNGSTEN_CHESTPLATE);
             entries.add(ModItems.TUNGSTEN_LEGGINGS);
             entries.add(ModItems.TUNGSTEN_BOOTS);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(entries -> {
+            entries.add(ModItems.TUNGSTEN_SLOP);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> entries.add(ModBlocks.TUNGSTEN_BLOCK));

@@ -21,10 +21,11 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        itemModelGenerator.register(west.tungsten_mod.item.ModItems.TUNGSTEN_INGOT, Models.GENERATED);
-        itemModelGenerator.register(west.tungsten_mod.item.ModItems.TUNGSTEN_SCRAP, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TUNGSTEN_INGOT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TUNGSTEN_SCRAP, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TUNGSTEN_SLOP, Models.GENERATED);
 
-        itemModelGenerator.register(west.tungsten_mod.item.ModItems.TUNGSTEN_UPGRADE_TEMPLATE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TUNGSTEN_UPGRADE_TEMPLATE, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.TUNGSTEN_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.TUNGSTEN_PICKAXE, Models.HANDHELD);
