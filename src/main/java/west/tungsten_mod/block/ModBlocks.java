@@ -16,16 +16,16 @@ public class ModBlocks {
     public static final Block TUNGSTEN_BLOCK = registerBlock(
             "tungsten_block",
             new Block(AbstractBlock.Settings.create()
-                    .strength(30f)
+                    .strength(25f)
                     .requiresTool()
                     .sounds(BlockSoundGroup.NETHERITE))
     );
     public static final Block TUNGSTEN_CLUMP = registerBlock(
             "tungsten_clump",
             new Block(AbstractBlock.Settings.create()
-                    .strength(30f)
+                    .strength(25f)
                     .requiresTool()
-                    .sounds(BlockSoundGroup.ANCIENT_DEBRIS))
+                    .sounds(BlockSoundGroup.DEEPSLATE))
     );
 
     private static Block registerBlock(String name, Block block) {
@@ -41,9 +41,6 @@ public class ModBlocks {
     public static void registerModBlocks() {
         TungstenMod.LOGGER.info("Registering Mod Blocks for " + TungstenMod.MOD_ID);
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
-            entries.add(ModBlocks.TUNGSTEN_BLOCK);
-            entries.add(ModBlocks.TUNGSTEN_CLUMP);
-        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> entries.add(ModBlocks.TUNGSTEN_BLOCK));
     }
 }

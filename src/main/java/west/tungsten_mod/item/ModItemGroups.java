@@ -53,7 +53,6 @@ public class ModItemGroups {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(ModItems.TUNGSTEN_INGOT);
             entries.add(ModItems.TUNGSTEN_SCRAP);
-            entries.add(ModBlocks.TUNGSTEN_CLUMP);
             entries.add(ModItems.TUNGSTEN_POWDER);
         });
 

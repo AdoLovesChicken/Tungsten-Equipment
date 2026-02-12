@@ -23,8 +23,8 @@ public class ModPlacedFeatures {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
         register(context, TUNGSTEN_CLUMP_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.TUNGSTEN_CLUMP_KEY),
-                ModOrePlacement.modifiersWithCount(5,
-                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(-60), YOffset.fixed(-10))));
+                ModOrePlacement.modifiersWithCount(4,
+                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(-64), YOffset.fixed(20))));
 
     }
 

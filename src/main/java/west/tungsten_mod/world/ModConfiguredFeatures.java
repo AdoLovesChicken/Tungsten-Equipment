@@ -25,7 +25,7 @@ public class ModConfiguredFeatures {
         List<OreFeatureConfig.Target> overworldtungstenores =
                 List.of(OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.TUNGSTEN_CLUMP.getDefaultState()));
 
-        register(context, TUNGSTEN_CLUMP_KEY, Feature.SCATTERED_ORE, new OreFeatureConfig(overworldtungstenores, 3, 0.25F));
+        register(context, TUNGSTEN_CLUMP_KEY, Feature.SCATTERED_ORE, new OreFeatureConfig(overworldtungstenores, 4, 0.1F));
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {

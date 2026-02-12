@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:tungsten_mod/obtain_tungsten_clump",
+  "parent": "minecraft:tungsten_mod/obtain_tungsten_powder",
   "criteria": {
     "has_tungsten_template": {
       "conditions": {
@@ -18,7 +18,7 @@
       "count": 1,
       "id": "tungsten_mod:tungsten_upgrade_template"
     },
-    "title": "Strongholds treasure"
+    "title": "Hidden Treasure"
   },
   "requirements": [
     [

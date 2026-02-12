@@ -25,21 +25,29 @@ public class TungstenMod implements ModInitializer {
 		ModLootTables.register();
 		ModWorldGeneration.generateModWorldGen();
 
-		registerBuiltinResourcePack();
+		registerBuiltinResourcePacks();
 	}
 
-	private static void registerBuiltinResourcePack() {
-		Identifier packId = Identifier.of(MOD_ID, "legacy");
+	private static void registerBuiltinResourcePacks() {
 
 		ModContainer container = FabricLoader
 				.getInstance()
 				.getModContainer(MOD_ID)
 				.orElseThrow();
 
+		// Legacy pack
 		ResourceManagerHelper.registerBuiltinResourcePack(
-				packId,
+				Identifier.of(MOD_ID, "legacy"),
+				container,
+				ResourcePackActivationType.NORMAL
+		);
+
+		// Glowing Tungsten pack
+		ResourceManagerHelper.registerBuiltinResourcePack(
+				Identifier.of(MOD_ID, "glowing_tungsten"),
 				container,
 				ResourcePackActivationType.NORMAL
 		);
 	}
+
 }

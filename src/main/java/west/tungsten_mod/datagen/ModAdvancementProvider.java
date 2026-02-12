@@ -92,7 +92,7 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                 .parent(SECOND)
                 .display(
                         ModItems.TUNGSTEN_UPGRADE_TEMPLATE,
-                        Text.literal("Strongholds treasure"),
+                        Text.literal("Hidden Treasure"),
                         Text.literal("Find A Tungsten Smithing Template"),
                         null,
                         AdvancementFrame.TASK,

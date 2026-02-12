@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:tungsten_mod/obtain_tungsten_clump",
+  "parent": "minecraft:tungsten_mod/obtain_tungsten_powder",
   "criteria": {
     "has_tungsten_block": {
       "conditions": {

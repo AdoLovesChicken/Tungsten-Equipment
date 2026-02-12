@@ -1,34 +1,33 @@
 {
-	"schemaVersion": 1,
-	"id": "tungsten_mod",
-	"version": "1.0.8",
-	"name": "Tungsten Mod",
-	"description": "adds an overworld ore that rivals netherite, offering similar strength without being a copy.",
-	"authors": [
-		"West-ghoster"
-	],
-	"contact": {
-		"homepage": "https://modrinth.com/mod/tungsten-equipment",
-		"sources": ""
-	},
-	"license": "CC0-1.0",
-	"icon": "assets/tungsten_mod/logo.png",
-	"environment": "*",
-	"entrypoints": {
-		"main": [
-			"west.tungsten_mod.TungstenMod"
-		],
-		"fabric-datagen": [
-			"west.tungsten_mod.TungstenModDataGenerator"
-		]
-	},
-	"mixins": [
-		"tungsten_mod.mixins.json"
-	],
-	"depends": {
-		"fabricloader": "*",
-		"minecraft": ">=1.21 <1.22",
-		"java": ">=21",
-		"fabric-api": "*"
-	}
+  "schemaVersion": 1,
+  "id": "tungsten_mod",
+  "version": "1.2.1",
+  "name": "Tungsten Mod",
+  "description": "adds an overworld ore that rivals netherite, offering similar strength without being a copy.",
+  "authors": [
+    "West-ghoster"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/tungsten-equipment"
+  },
+  "license": "CC0-1.0",
+  "icon": "assets/tungsten_mod/logo.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "west.tungsten_mod.TungstenMod"
+    ],
+    "fabric-datagen": [
+      "west.tungsten_mod.TungstenModDataGenerator"
+    ]
+  },
+  "mixins": [
+    "tungsten_mod.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": "*",
+    "minecraft": ">=1.21 <1.22",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
 }
