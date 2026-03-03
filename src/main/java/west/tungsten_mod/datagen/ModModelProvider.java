@@ -15,7 +15,7 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-        blockStateModelGenerator.registerSimpleCubeAll(west.tungsten_mod.block.ModBlocks.TUNGSTEN_CLUMP);
+        blockStateModelGenerator.registerSimpleCubeAll(west.tungsten_mod.block.ModBlocks.TUNGSTEN_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(west.tungsten_mod.block.ModBlocks.TUNGSTEN_BLOCK);
     }
 
@@ -24,6 +24,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.TUNGSTEN_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.TUNGSTEN_SCRAP, Models.GENERATED);
         itemModelGenerator.register(ModItems.TUNGSTEN_POWDER, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TUNGSTEN_SLOP, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TUNGSTEN_JERKY, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.TUNGSTEN_UPGRADE_TEMPLATE, Models.GENERATED);
 

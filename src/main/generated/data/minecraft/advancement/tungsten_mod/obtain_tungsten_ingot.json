@@ -1,0 +1,30 @@
+{
+  "parent": "minecraft:tungsten_mod/root",
+  "criteria": {
+    "has_tungsten_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "tungsten_mod:tungsten_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": "Craft a Tungsten Ingot",
+    "icon": {
+      "count": 1,
+      "id": "tungsten_mod:tungsten_ingot"
+    },
+    "title": "Netherite’s Equal"
+  },
+  "requirements": [
+    [
+      "has_tungsten_ingot"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

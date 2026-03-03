@@ -27,20 +27,47 @@ public class ModLootTables {
     private static final Identifier JUNGLE_TEMPLE =
             Identifier.ofVanilla("chests/jungle_temple");
 
-    // Trial Chambers – Ominous Vault ONLY
-    private static final Identifier OMINOUS_VAULT =
-            Identifier.ofVanilla("chests/trial_chambers/ominous_vault");
-
-    // Dungeon (mob spawner room)
+    // Dungeon
     private static final Identifier SIMPLE_DUNGEON =
             Identifier.ofVanilla("chests/simple_dungeon");
+
+    // Mineshaft
+    private static final Identifier MINESHAFT =
+            Identifier.ofVanilla("chests/abandoned_mineshaft");
+
+    // Pillager Outpost
+    private static final Identifier PILLAGER_OUTPOST =
+            Identifier.ofVanilla("chests/pillager_outpost");
+
+    // Underwater Ruins
+    private static final Identifier UNDERWATER_RUIN_SMALL =
+            Identifier.ofVanilla("chests/underwater_ruin_small");
+    private static final Identifier UNDERWATER_RUIN_BIG =
+            Identifier.ofVanilla("chests/underwater_ruin_big");
+
+    // Shipwrecks
+    private static final Identifier SHIPWRECK_TREASURE =
+            Identifier.ofVanilla("chests/shipwreck_treasure");
+
+    // Buried treasure
+    private static final Identifier BURIED_TREASURE =
+            Identifier.ofVanilla("chests/buried_treasure");
+
+    // Igloo
+    private static final Identifier IGLOO =
+            Identifier.ofVanilla("chests/igloo_chest");
+
 
     public static void register() {
         LootTableEvents.MODIFY.register((id, tableBuilder, source, registries) -> {
             if (!source.isBuiltin()) return;
 
-                // Dungeon – 5%
-            else if (id.getValue().equals(SIMPLE_DUNGEON)) {
+            // -------------------------------
+            // EXISTING UPGRADE TEMPLATE LOOT
+            // -------------------------------
+
+            // Dungeon – 5%
+            if (id.getValue().equals(SIMPLE_DUNGEON)) {
                 tableBuilder.pool(
                         LootPool.builder()
                                 .conditionally(RandomChanceLootCondition.builder(0.05f))
@@ -81,6 +108,27 @@ public class ModLootTables {
                         LootPool.builder()
                                 .conditionally(RandomChanceLootCondition.builder(0.20f))
                                 .with(ItemEntry.builder(ModItems.TUNGSTEN_UPGRADE_TEMPLATE))
+                );
+            }
+
+
+            // -------------------------------
+            // NEW: TUNGSTEN SCRAP LOOT (12%)
+            // -------------------------------
+
+            float SCRAP_CHANCE = 0.12f;
+
+            if (id.getValue().equals(MINESHAFT)
+                    || id.getValue().equals(PILLAGER_OUTPOST)
+                    || id.getValue().equals(UNDERWATER_RUIN_SMALL)
+                    || id.getValue().equals(UNDERWATER_RUIN_BIG)
+                    || id.getValue().equals(SHIPWRECK_TREASURE)
+                    || id.getValue().equals(BURIED_TREASURE)) {
+
+                tableBuilder.pool(
+                        LootPool.builder()
+                                .conditionally(RandomChanceLootCondition.builder(SCRAP_CHANCE))
+                                .with(ItemEntry.builder(ModItems.TUNGSTEN_SCRAP))
                 );
             }
         });

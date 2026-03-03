@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:tungsten_mod/obtain_tungsten_template",
+  "parent": "minecraft:tungsten_mod/craft_any_tungsten_item",
   "criteria": {
     "has_tungsten_boots": {
       "conditions": {
@@ -53,16 +53,16 @@
   },
   "requirements": [
     [
-      "has_tungsten_chestplate"
+      "has_tungsten_helmet"
     ],
     [
-      "has_tungsten_boots"
+      "has_tungsten_chestplate"
     ],
     [
       "has_tungsten_leggings"
     ],
     [
-      "has_tungsten_helmet"
+      "has_tungsten_boots"
     ]
   ],
   "sends_telemetry_event": true

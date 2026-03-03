@@ -1,10 +1,11 @@
 {
+  "parent": "minecraft:tungsten_mod/obtain_tungsten_powder",
   "criteria": {
-    "has_tungsten": {
+    "has_tungsten_slop": {
       "conditions": {
         "items": [
           {
-            "items": "tungsten_mod:tungsten_powder"
+            "items": "tungsten_mod:tungsten_slop"
           }
         ]
       },
@@ -12,19 +13,17 @@
     }
   },
   "display": {
-    "announce_to_chat": false,
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
-    "description": "Dabble in the Tungsten Mod",
+    "description": "Obtain your first Tungsten Slop",
     "icon": {
       "count": 1,
-      "id": "tungsten_mod:tungsten_ingot"
+      "id": "tungsten_mod:tungsten_slop"
     },
-    "show_toast": false,
-    "title": "Tungsten"
+    "title": "Yummy Slop"
   },
   "requirements": [
     [
-      "has_tungsten"
+      "has_tungsten_slop"
     ]
   ],
   "sends_telemetry_event": true

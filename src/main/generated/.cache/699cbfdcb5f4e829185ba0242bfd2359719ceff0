@@ -1,4 +1,4 @@
-// 1.21.1	2026-02-18T20:26:47.0413161	Tungsten Mod/
-ca4ed1063c3ae9df9b540c8d68116fbb6994243f data\tungsten_mod\worldgen\configured_feature\tungsten_clump.json
-d5afe3b5f747c392ab990267e287bc3ab1251bae data\tungsten_mod\worldgen\placed_feature\tungsten_clump_placed_key.json
+// 1.21.1	2026-03-03T19:02:30.3228407	Tungsten Mod/
+590fe0add06bcec3128b3876f66f15527e8e8590 data\tungsten_mod\worldgen\placed_feature\tungsten_ore_placed_key.json
+25eb4aa2fc17b9dfb87280641cec6267163de661 data\tungsten_mod\worldgen\configured_feature\tungsten_ore.json
 d0ced4cf7b37ee3e0996bfe4cace60509c1023b0 data\tungsten_mod\trim_material\tungsten_ingot.json

@@ -5,7 +5,7 @@
   "item.tungsten_mod.tungsten_upgrade_template": "Smithing Template",
 
   "block.tungsten_mod.tungsten_block": "Block of Tungsten",
-  "block.tungsten_mod.tungsten_clump": "Tungsten Ore",
+  "block.tungsten_mod.tungsten_ore": "Tungsten Ore",
 
   "itemgroup.tungsten_mod": "Tungsten Equipment",
 
@@ -35,6 +35,11 @@
 
   "item.tungsten_mod.tungsten_powder": "Tungsten Powder",
 
+  "item.tungsten_mod.tungsten_slop": "Tungsten Slop",
+  "item.tungsten_mod.tungsten_jerky": "Tungsten Jerky",
+
   "pack.tungsten_mod.legacy": "Legacy Tungsten",
-  "pack.tungsten_mod.glowing_tungsten": "Glowing Tungsten"
+  "pack.tungsten_mod.glowing_tungsten": "Glowing Tungsten",
+
+  "enchantment.tungsten_mod.heavy": "Heavy"
 }

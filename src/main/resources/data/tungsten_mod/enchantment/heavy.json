@@ -1,0 +1,44 @@
+{
+  "anvil_cost": 4,
+  "description": {
+    "translate": "enchantment.tungsten_mod.heavy"
+  },
+  "effects": {
+    "minecraft:attributes": [
+      {
+        "amount": {
+          "type": "minecraft:linear",
+          "base": 0.025,
+          "per_level_above_first": 0.025
+        },
+        "attribute": "minecraft:generic.knockback_resistance",
+        "id": "tungsten_mod:heavy_knockback_resistance",
+        "operation": "add_value"
+      },
+      {
+        "amount": {
+          "type": "minecraft:linear",
+          "base": -0.005,
+          "per_level_above_first": -0.005
+        },
+        "attribute": "minecraft:generic.movement_speed",
+        "id": "tungsten_mod:heavy_movement_penalty",
+        "operation": "add_multiplied_total"
+      }
+    ]
+  },
+  "max_cost": {
+    "base": 40,
+    "per_level_above_first": 11
+  },
+  "max_level": 3,
+  "min_cost": {
+    "base": 10,
+    "per_level_above_first": 11
+  },
+  "slots": [
+    "armor"
+  ],
+  "supported_items": "#minecraft:enchantable/armor",
+  "weight": 5
+}

@@ -1,0 +1,128 @@
+{
+  "parent": "minecraft:tungsten_mod/obtain_tungsten_template",
+  "criteria": {
+    "axe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "tungsten_mod:tungsten_axe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "boots": {
+      "conditions": {
+        "items": [
+          {
+            "items": "tungsten_mod:tungsten_boots"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": "tungsten_mod:tungsten_chestplate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "tungsten_mod:tungsten_helmet"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "hoe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "tungsten_mod:tungsten_hoe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "horse_armor": {
+      "conditions": {
+        "items": [
+          {
+            "items": "tungsten_mod:tungsten_horse_armor"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": "tungsten_mod:tungsten_leggings"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "tungsten_mod:tungsten_pickaxe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "shovel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "tungsten_mod:tungsten_shovel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": "tungsten_mod:tungsten_sword"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Craft or obtain any Tungsten equipment",
+    "icon": {
+      "count": 1,
+      "id": "tungsten_mod:tungsten_sword"
+    },
+    "title": "Forged in Tungsten"
+  },
+  "requirements": [
+    [
+      "sword",
+      "pickaxe",
+      "axe",
+      "shovel",
+      "hoe",
+      "helmet",
+      "chestplate",
+      "leggings",
+      "boots",
+      "horse_armor"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

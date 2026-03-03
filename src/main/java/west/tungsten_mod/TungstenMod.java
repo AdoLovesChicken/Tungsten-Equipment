@@ -24,7 +24,6 @@ public class TungstenMod implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 		ModLootTables.register();
 		ModWorldGeneration.generateModWorldGen();
-
 		registerBuiltinResourcePacks();
 	}
 

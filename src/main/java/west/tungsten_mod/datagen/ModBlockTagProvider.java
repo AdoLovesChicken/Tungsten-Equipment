@@ -18,11 +18,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ModBlocks.TUNGSTEN_BLOCK)
-                .add(ModBlocks.TUNGSTEN_CLUMP);
+                .add(ModBlocks.TUNGSTEN_ORE);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.TUNGSTEN_BLOCK)
-                .add(ModBlocks.TUNGSTEN_CLUMP);
+                .add(ModBlocks.TUNGSTEN_ORE);
 
         getOrCreateTagBuilder(BlockTags.BEACON_BASE_BLOCKS)
                 .add(ModBlocks.TUNGSTEN_BLOCK);

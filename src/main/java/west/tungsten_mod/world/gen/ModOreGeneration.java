@@ -8,6 +8,6 @@ import west.tungsten_mod.world.ModPlacedFeatures;
 public class ModOreGeneration {
     public static void generateOres() {
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES,
-                ModPlacedFeatures.TUNGSTEN_CLUMP_PLACED_KEY);
+                ModPlacedFeatures.TUNGSTEN_ORE_PLACED_KEY);
     }
 }

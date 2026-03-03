@@ -2,15 +2,25 @@ package west.tungsten_mod.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemGroups;
-import net.minecraft.item.ItemStack;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.ItemEnchantmentsComponent;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.EnchantmentLevelEntry;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import west.tungsten_mod.TungstenMod;
 import west.tungsten_mod.block.ModBlocks;
+import west.tungsten_mod.enchantment.ModEnchantments;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.EnchantmentLevelEntry;
+import net.minecraft.item.EnchantedBookItem;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.entry.RegistryEntry;
 
 public class ModItemGroups {
 
@@ -28,7 +38,7 @@ public class ModItemGroups {
 
                         entries.add(ModItems.TUNGSTEN_UPGRADE_TEMPLATE);
 
-                        entries.add(ModBlocks.TUNGSTEN_CLUMP);
+                        entries.add(ModBlocks.TUNGSTEN_ORE);
                         entries.add(ModBlocks.TUNGSTEN_BLOCK);
 
                         entries.add(ModItems.TUNGSTEN_SWORD);
@@ -43,6 +53,19 @@ public class ModItemGroups {
                         entries.add(ModItems.TUNGSTEN_BOOTS);
 
                         entries.add(ModItems.TUNGSTEN_HORSE_ARMOR);
+                        entries.add(ModItems.TUNGSTEN_SLOP);
+                        entries.add(ModItems.TUNGSTEN_JERKY);
+
+                        RegistryEntry<Enchantment> heavyEntry = displayContext.lookup()
+                                .getWrapperOrThrow(RegistryKeys.ENCHANTMENT)
+                                .getOrThrow(ModEnchantments.HEAVY);
+
+                        for (int level = 1; level <= 3; level++) {
+                            entries.add(EnchantedBookItem.forEnchantment(
+                                    new EnchantmentLevelEntry(heavyEntry, level)
+                            ));
+                        }
+
                     })
                     .build()
     );
@@ -71,8 +94,13 @@ public class ModItemGroups {
             entries.add(ModItems.TUNGSTEN_BOOTS);
         });
 
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(entries -> {
+            entries.add(ModItems.TUNGSTEN_SLOP);
+            entries.add(ModItems.TUNGSTEN_JERKY);
+        });
+
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> entries.add(ModBlocks.TUNGSTEN_BLOCK));
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> entries.add(ModBlocks.TUNGSTEN_CLUMP));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> entries.add(ModBlocks.TUNGSTEN_ORE));
     }
 }

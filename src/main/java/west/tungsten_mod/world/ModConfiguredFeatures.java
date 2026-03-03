@@ -17,15 +17,15 @@ import west.tungsten_mod.block.ModBlocks;
 import java.util.List;
 
 public class ModConfiguredFeatures {
-    public static final RegistryKey<ConfiguredFeature<?, ?>> TUNGSTEN_CLUMP_KEY = registerKey("tungsten_clump");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> TUNGSTEN_ORE_KEY = registerKey("tungsten_ore");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest deepslateReplaceables = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
 
         List<OreFeatureConfig.Target> overworldtungstenores =
-                List.of(OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.TUNGSTEN_CLUMP.getDefaultState()));
+                List.of(OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.TUNGSTEN_ORE.getDefaultState()));
 
-        register(context, TUNGSTEN_CLUMP_KEY, Feature.SCATTERED_ORE, new OreFeatureConfig(overworldtungstenores, 4, 0.1F));
+        register(context, TUNGSTEN_ORE_KEY, Feature.SCATTERED_ORE, new OreFeatureConfig(overworldtungstenores, 4, 0.1F));
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {

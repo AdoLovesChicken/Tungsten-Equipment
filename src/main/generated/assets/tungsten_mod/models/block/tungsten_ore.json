@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "tungsten_mod:block/tungsten_clump"
+    "all": "tungsten_mod:block/tungsten_ore"
   }
 }

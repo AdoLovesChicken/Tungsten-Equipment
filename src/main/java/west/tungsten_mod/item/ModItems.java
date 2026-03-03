@@ -10,6 +10,7 @@ import net.minecraft.util.Identifier;
 import west.tungsten_mod.TungstenMod;
 import net.minecraft.item.SmithingTemplateItem;
 import west.tungsten_mod.item.custom.ModArmorItem;
+import west.tungsten_mod.item.TungstenSlopItem;
 
 import java.util.List;
 
@@ -18,6 +19,17 @@ public class ModItems {
     public static final Item TUNGSTEN_INGOT = registerItem("tungsten_ingot", new Item(new Item.Settings().fireproof()));
     public static final Item TUNGSTEN_SCRAP = registerItem("tungsten_scrap", new Item(new Item.Settings().fireproof()));
     public static final Item TUNGSTEN_POWDER = registerItem("tungsten_powder", new Item(new Item.Settings().fireproof()));
+
+    public static final Item TUNGSTEN_SLOP = registerItem(
+            "tungsten_slop",
+            new TungstenSlopItem(new Item.Settings().food(ModFoodComponents.TUNGSTEN_SLOP))
+    );
+
+    public static final Item TUNGSTEN_JERKY = registerItem(
+            "tungsten_jerky",
+            new Item(new Item.Settings().food(ModFoodComponents.TUNGSTEN_JERKY))
+    );
+
 
     public static final Item TUNGSTEN_UPGRADE_TEMPLATE = Registry.register(
             Registries.ITEM,

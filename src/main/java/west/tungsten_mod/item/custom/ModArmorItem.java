@@ -16,7 +16,7 @@ import java.util.List;
 
 public class ModArmorItem extends ArmorItem {
 
-    private static final double SPEED_REDUCTION = -0.025; // -2.5% per piece
+    private static final double SPEED_REDUCTION = -0.04; // -5% per piece
 
     public ModArmorItem(RegistryEntry<ArmorMaterial> material, Type type, Settings settings) {
         super(material, type, settings);

@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:tungsten_mod/obtain_tungsten",
+  "parent": "minecraft:tungsten_mod/root",
   "criteria": {
     "has_tungsten_powder": {
       "conditions": {
@@ -14,12 +14,12 @@
   },
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
-    "description": "Obtain Tungsten Powder",
+    "description": "Get Tungsten Powder",
     "icon": {
       "count": 1,
       "id": "tungsten_mod:tungsten_powder"
     },
-    "title": "Netherites Equal"
+    "title": "Powder?"
   },
   "requirements": [
     [

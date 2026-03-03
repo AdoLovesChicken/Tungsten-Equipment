@@ -1,0 +1,30 @@
+{
+  "parent": "minecraft:tungsten_mod/obtain_tungsten_powder",
+  "criteria": {
+    "has_tungsten_jerky": {
+      "conditions": {
+        "items": [
+          {
+            "items": "tungsten_mod:tungsten_jerky"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": "Get Some Tungsten Jerky",
+    "icon": {
+      "count": 1,
+      "id": "tungsten_mod:tungsten_jerky"
+    },
+    "title": "Metallic Munchies"
+  },
+  "requirements": [
+    [
+      "has_tungsten_jerky"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

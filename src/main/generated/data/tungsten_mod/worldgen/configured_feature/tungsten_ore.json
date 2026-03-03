@@ -6,7 +6,7 @@
     "targets": [
       {
         "state": {
-          "Name": "tungsten_mod:tungsten_clump"
+          "Name": "tungsten_mod:tungsten_ore"
         },
         "target": {
           "predicate_type": "minecraft:tag_match",

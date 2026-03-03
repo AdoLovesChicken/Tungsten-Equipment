@@ -20,8 +20,8 @@ public class ModBlocks {
                     .requiresTool()
                     .sounds(BlockSoundGroup.NETHERITE))
     );
-    public static final Block TUNGSTEN_CLUMP = registerBlock(
-            "tungsten_clump",
+    public static final Block TUNGSTEN_ORE = registerBlock(
+            "tungsten_ore",
             new Block(AbstractBlock.Settings.create()
                     .strength(25f)
                     .requiresTool()

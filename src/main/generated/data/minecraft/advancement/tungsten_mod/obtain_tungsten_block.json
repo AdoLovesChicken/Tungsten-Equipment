@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:tungsten_mod/obtain_tungsten_powder",
+  "parent": "minecraft:tungsten_mod/obtain_tungsten_ingot",
   "criteria": {
     "has_tungsten_block": {
       "conditions": {
@@ -13,7 +13,7 @@
     }
   },
   "display": {
-    "description": "Obtain tungsten block",
+    "description": "Obtain a block of Tungsten",
     "icon": {
       "count": 1,
       "id": "tungsten_mod:tungsten_block"
